@@ -1,0 +1,157 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(130deg, #1c283d, #8ebefc);
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 15px; /* Espaciado */
+    text-align: center; /* Centrar texto */
+}
+
+/* Estilo del título */
+#titulo {
+    margin: 0; /* Sin márgenes */
+    display: inline-block; /* Para alinear con el botón */
+}
+
+/* Estilo del botón de regreso */
+.btn-back {
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 15px; /* Espaciado */
+    background-color: #4377af; /* Color de fondo */
+    border-radius: 5px; /* Bordes redondeados */
+    float: right; /* Alinear a la derecha */
+}
+
+/* Menú de navegación */
+#admin-menu {
+    background-color: #444; /* Color de fondo */
+    padding: 10px; /* Espaciado */
+    display: flex; /* Flexbox para alineación */
+    justify-content: space-around; /* Espaciado uniforme */
+}
+
+/* Estilo de los botones del menú */
+.admin-btn {
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 15px; /* Espaciado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.admin-btn:hover {
+    background-color: #555; /* Color de fondo al pasar el ratón */
+}
+
+/* Contenedor de secciones */
+.container {
+    margin: 20px auto; /* Espaciado */
+    background-color: #fff; /* Color de fondo */
+    padding: 20px; /* Espaciado */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 90%; /* Establecer ancho de contenedor */
+    max-width: 1000px; /* Aumentar ancho máximo del contenedor */
+}
+
+/* Estilo de los formularios */
+.form-group {
+    margin-bottom: 15px; /* Espaciado entre campos */
+}
+
+label {
+    display: block; /* Alinear etiquetas */
+    margin-bottom: 5px; /* Espaciado inferior */
+}
+
+/* Ajustar ancho de los campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+select,
+textarea {
+    width: 70%; /* Ancho mínimo del 70% del contenedor */
+    max-width: 600px; /* Aumentar el ancho máximo */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo del botón de guardar */
+button {
+    background-color: #4377af; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilo de las tablas */
+table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Colapsar bordes */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+table th, table td {
+    border: 1px solid #ccc; /* Borde */
+    padding: 10px; /* Espaciado */
+    text-align: left; /* Alinear a la izquierda */
+}
+
+table th {
+    background-color: #f4f4f4; /* Color de fondo para encabezados */
+}
+
+/* Estilo de los botones en tablas */
+.btn {
+    display: inline-block; /* Para que estén en línea */
+    padding: 8px 15px; /* Espaciado */
+    margin: 5px; /* Espaciado */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    color: #fff; /* Color del texto */
+}
+
+.btn-warning {
+    background-color: #e1c05b; /* Color de fondo */
+}
+
+.btn-danger {
+    background-color: #cc4956; /* Color de fondo */
+}
+
+.btn-warning:hover {
+    background-color: #e0a800; /* Color de fondo al pasar el ratón */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #333; /* Color de fondo del footer */
+    color: #fff; /* Color del texto */
+    text-align: center; /* Centrar texto */
+    padding: 15px 0; /* Espaciado vertical */
+    position: relative; /* Para asegurarse de que se mantenga en su lugar */
+    bottom: 0; /* Fijar en la parte inferior */
+    width: 100%; /* Asegurarse de que ocupe todo el ancho */
+    margin-top: 20px; /* Espacio arriba del footer */
+}
