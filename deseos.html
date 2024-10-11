@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Park Tracker</title>
+    <link rel="stylesheet" href="css/lista.css">
+</head>
+<body>
+    <div class="container">
+        <h1>National Park Tracker</h1>
+        
+        <!--Barra de búsqueda para agregar nuevas zonas-->
+        <div class="add-park-form">
+            <input type="text" id="park-name" placeholder="Nombre del parque">
+            <input type="text" id="park-location" placeholder="Ubicación del parque">
+            <button id="add-park-btn">Agregar Parque</button>
+        </div>
+
+        <div class="filters">
+            <button id="all" class="filter-btn active">Todos</button>
+            <button id="visited" class="filter-btn">Visitados</button>
+            <button id="not-visited" class="filter-btn">No Visitados</button>
+        </div>
+
+        <div class="parks-grid" id="parks-grid">
+            <div class="park-card" data-visited="false">
+                <img src="img/lista/1.webp" alt="Acadia National Park">
+                <h3>Acadia</h3>
+                <p>Maine</p>
+                <label>
+                    <input type="checkbox" class="visited-checkbox"> Visitado
+                </label>
+            </div>
+            <div class="park-card" data-visited="false">
+                <img src="img/lista/2.webp" alt="American Samoa National Park">
+                <h3>American Samoa</h3>
+                <p>American Samoa</p>
+                <label>
+                    <input type="checkbox" class="visited-checkbox"> Visitado
+                </label>
+            </div>
+            <div class="park-card" data-visited="false">
+                <img src="img/lista/3.png" alt="Badlands National Park">
+                <h3>Badlands</h3>
+                <p>South Dakota</p>
+                <label>
+                    <input type="checkbox" class="visited-checkbox"> Visitado
+                </label>
+            </div>
+            <div class="park-card" data-visited="false">
+                <img src="img/lista/1.webp" alt="Big Bend National Park">
+                <h3>Big Bend</h3>
+                <p>Texas</p>
+                <label>
+                    <input type="checkbox" class="visited-checkbox"> Visitado
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="js/lista.js"></script>
+</body>
+</html>

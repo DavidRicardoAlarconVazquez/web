@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Zonas Arqueológicas</title>
+    <link rel="stylesheet" href="css/style_panelAdmin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <h1 id="titulo"><i class="fas fa-cogs"></i> Panel de Control</h1>
+
+    <!-- Botón para regresar al index -->
+    <a href="index2.php" class="btn-back" title="Regresar al Inicio">
+        <i class="fas fa-home"></i> Inicio
+    </a>
+</header>
+
+<!-- Menú de pestañas de administración -->
+<nav id="admin-menu">
+    <a href="#" class="admin-btn" data-section="zonas"><i class="fas fa-landmark"></i> Zonas Arqueológicas</a>
+    <a href="#" class="admin-btn" data-section="culturas"><i class="fas fa-feather-alt"></i> Culturas</a>
+    <a href="#" class="admin-btn" data-section="usuarios"><i class="fas fa-users"></i> Usuarios</a>
+</nav>
+
+<!-- Secciones del contenido -->
+<div class="container" id="zonas">
+    <h2>Zonas arqueológicas</h2>
+    <form action="guardar_zona.php" method="POST">
+        <h3>Agregar Zonas Arqueológicas</h3>
+        <div class="form-group">
+            <label for="nombre">Nombre de la Zona Arqueológica:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="imagen">URL de la Imagen:</label>
+            <input type="text" id="imagen" name="imagen" required>
+        </div>
+        <div class="form-group">
+            <label for="enlace">Enlace a más información:</label>
+            <input type="url" id="enlace" name="enlace" required>
+        </div>
+        <div class="form-group">
+            <label for="cultura">Tipo de Cultura:</label>
+            <select id="cultura" name="cultura" required>
+                <option value="" disabled selected>Selecciona una cultura</option>
+                <option value="maya">Maya</option>
+                <option value="olmeca">Olmeca</option>
+                <option value="tolteca">Tolteca</option>
+            </select>
+        </div>
+        <button type="submit">Guardar Zona</button>
+    </form>
+
+    <!-- Tabla de zonas arqueológicas -->
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Imagen</th>
+                <th>Cultura</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Teotihuacán</td>
+                <td>Una de las ciudades más grandes de Mesoamérica.</td>
+                <td><img src="img/teotihuacan.jpg" alt="Teotihuacán" width="100"></td>
+                <td>Maya</td>
+                <td>
+                    <a href="editar_zona.php?id=1" class="btn btn-warning">Editar</a>
+                    <a href="eliminar_zona.php?id=1" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+            <!-- Más filas aquí -->
+        </tbody>
+    </table>
+</div>
+
+<div class="container" id="culturas">
+    <h2>Administrar Culturas</h2>
+    <form action="guardar_cultura.php" method="POST">
+        <h3>Agregar Culturas</h3>
+        <div class="form-group">
+            <label for="nombreCultura">Nombre de la Cultura:</label>
+            <input type="text" id="nombreCultura" name="nombreCultura" required>
+        </div>
+        <div class="form-group">
+            <label for="descripcionCultura">Descripción:</label>
+            <textarea id="descripcionCultura" name="descripcionCultura" required></textarea>
+        </div>
+        <button type="submit">Guardar Cultura</button>
+    </form>
+
+    <!-- Tabla de culturas -->
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre de la Cultura</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Maya</td>
+                <td>Una de las civilizaciones más avanzadas de Mesoamérica.</td>
+                <td>
+                    <a href="editar_cultura.php?id=1" class="btn btn-warning">Editar</a>
+                    <a href="eliminar_cultura.php?id=1" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container" id="usuarios">
+    <h2>Administrar Usuarios</h2>
+    <!-- Tabla de usuarios -->
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Contraseña</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Juan Pérez</td>
+                <td>juan.perez@example.com</td>
+                <td>*******</td>
+                <td>
+                    <a href="editar_usuario.php?id=1" class="btn btn-warning">Editar</a>
+                    <a href="eliminar_usuario.php?id=1" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>María López</td>
+                <td>maria.lopez@example.com</td>
+                <td>*******</td>
+                <td>
+                    <a href="editar_usuario.php?id=2" class="btn btn-warning">Editar</a>
+                    <a href="eliminar_usuario.php?id=2" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<footer>
+    <p> © 2024 Panel de Administración. Todos los derechos reservados.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.container').hide(); // Ocultar todas las secciones al cargar la página
+        $('#zonas').show(); // Mostrar por defecto la primera sección (Zonas Arqueológicas)
+        
+        $('.admin-btn').click(function() {
+            var section = $(this).data('section');
+            $('.container').hide(); // Ocultar todas las secciones
+            $('#' + section).show(); // Mostrar la sección correspondiente
+        });
+    });
+</script>
+
+</body>
+</html>
